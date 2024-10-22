@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #2E25B1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sub_text_logo
+{
+    color: white;
+    font-weight: lighter;
+    word-spacing: 0.1rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom : 2rem;
+}
+
+.img_logo {
+    height: 8rem;
+    width: auto;
+}
+
+.text_logo {
+    font-size: 8rem;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+.coming_soon {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.7;
+    font-weight: lighter;
+}
+
+/* Animation for dots */
+.dots {
+    display: inline-block;
+}
+
+.dot {
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-left: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: jump 1s infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .img_logo {
+        height: 5rem;
+    }
+    .text_logo {
+        font-size: 5rem;
+    }
+    .coming_soon {
+        font-size: 1.2rem;
+    }
+    .dot {
+        width: 0.2rem;
+        height: 0.2rem;
+        margin-left: 0.3rem;
+    }
+    .sub_text_logo
+    {
+        word-spacing: 0.1rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        margin-bottom : 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo
+    {
+        gap: 1rem;
+    }
+    .img_logo {
+        height: 4rem;
+    }
+    .text_logo {
+        font-size: 4rem;
+    }
+    .coming_soon {
+        font-size: 1rem;
+    }
+    .dot {
+        width: 0.15rem;
+        height: 0.15rem;
+        margin-left: 0.2rem;
+    }
+    .sub_text_logo
+    {
+        word-spacing: 0.1rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        margin-bottom : 1rem;
+    }
+}
